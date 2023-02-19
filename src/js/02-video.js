@@ -1,4 +1,3 @@
-// Наталія, пробачте, але більшість цієї роботи виконана з допомогою ChatGPT та моїх колег :(
 import Player from '@vimeo/player';
 import throttle from 'lodash.throttle';
 
@@ -8,7 +7,6 @@ const player = new Player(iframe);
 const handleTimeUpdate = (data) => {
   const currentTime = data.seconds;
   localStorage.setItem("videoplayer-current-time", currentTime);
-  console.log(currentTime);
 };
 
 function getterDataLocalStorage() {

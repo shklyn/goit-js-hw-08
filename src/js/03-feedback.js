@@ -27,7 +27,6 @@ const clearFormData = () => {
   localStorage.removeItem(feedbackFormStateKey);
   emailInput.value = '';
   messageInput.value = '';
-  console.log({ email: emailInput.value, message: messageInput.value });
 };
 
 const saveFormDataThrottled = throttle(saveFormData, 500);
@@ -35,6 +34,7 @@ const saveFormDataThrottled = throttle(saveFormData, 500);
 form.addEventListener('input', saveFormDataThrottled);
 form.addEventListener('submit', event => {
   event.preventDefault();
+  console.log({ email: emailInput.value, message: messageInput.value });
   clearFormData();
 });
 
